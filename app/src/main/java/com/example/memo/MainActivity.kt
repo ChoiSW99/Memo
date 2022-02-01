@@ -5,49 +5,70 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.example.memo.databinding.ActivityMainBinding
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
+import androidx.core.view.ViewCompat
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
+import me.relex.circleindicator.CircleIndicator3
+
 
 class MainActivity : AppCompatActivity() {
-
-    lateinit var binding: ActivityMainBinding
+    private var mPager: ViewPager2? = null
+    private var pagerAdapter: FragmentStateAdapter? = null
+    private val num_page = 4
+    private var mIndicator: CircleIndicator3? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-        /*탭 설정*/
-        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                // 탭이 선택 되었을 때
+        //ViewPager2
+        mPager = findViewById(R.id.viewPager2)
+
+        //Adapter
+        pagerAdapter = MyAdapter(this, num_page)
+        mPager?.adapter = pagerAdapter
+        //Indicator
+        mIndicator = findViewById(R.id.indicator)
+        mIndicator?.setViewPager(mPager)
+        mIndicator?.createIndicators(num_page, 0)
+        //ViewPager Setting
+        mPager?.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        mPager?.currentItem = 1000
+        mPager?.offscreenPageLimit = 3
+        mPager?.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels)
+                if (positionOffsetPixels == 0) {
+                    mPager?.currentItem = position
+                }
             }
 
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-                // 탭이 선택되지 않은 상태로 변경 되었을 때
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-                // 이미 선택된 탭이 다시 선택 되었을 때
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                mIndicator?.animatePageSelected(position % num_page)
             }
         })
-
-        // 뷰페이저에 어댑터 연결
-        binding.viewPager.adapter = ViewPagerAdapter(this)
-
-        /* 탭과 뷰페이저를 연결, 여기서 새로운 탭을 다시 만드므로 레이아웃에서 꾸미지말고
-        여기서 꾸며야함
-         */
-        TabLayoutMediator(binding.tabLayout, binding.viewPager) {tab, position ->
-            when(position) {
-                0 -> tab.text = "탭1"
-                1 -> tab.text = "탭2"
-                2 -> tab.text = "탭3"
-                3 -> tab.text = "탭4"
+        val pageMargin = resources.getDimensionPixelOffset(R.dimen.pageMargin).toFloat()
+        val pageOffset = resources.getDimensionPixelOffset(R.dimen.offset).toFloat()
+        mPager?.setPageTransformer(ViewPager2.PageTransformer { page, position ->
+            val myOffset = position * -(2 * pageOffset + pageMargin)
+            if (mPager?.orientation == ViewPager2.ORIENTATION_HORIZONTAL) {
+                if (ViewCompat.getLayoutDirection(mPager!!) == ViewCompat.LAYOUT_DIRECTION_RTL) {
+                    page.translationX = -myOffset
+                } else {
+                    page.translationX = myOffset
+                }
+            } else {
+                page.translationY = myOffset
             }
-        }.attach()
+        })
     }
+
+
 
     /*메뉴바*/
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

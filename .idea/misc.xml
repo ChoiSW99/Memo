@@ -5,8 +5,13 @@
       <map>
         <entry key="..\:/Android_Studio/Memo/app/src/main/res/layout/activity_add.xml" value="0.10460992907801418" />
         <entry key="..\:/Android_Studio/Memo/app/src/main/res/layout/activity_edit.xml" value="0.10460992907801418" />
-        <entry key="..\:/Android_Studio/Memo/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android_Studio/Memo/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Android_Studio/Memo/app/src/main/res/layout/blank_fragment.xml" value="0.1778115501519757" />
+        <entry key="..\:/Android_Studio/Memo/app/src/main/res/layout/fragment_blank.xml" value="0.12635869565217392" />
+        <entry key="..\:/Android_Studio/Memo/app/src/main/res/layout/fragment_memo1.xml" value="0.25" />
+        <entry key="..\:/Android_Studio/Memo/app/src/main/res/layout/fragment_memo2.xml" value="0.12635869565217392" />
+        <entry key="..\:/Android_Studio/Memo/app/src/main/res/layout/fragment_memo3.xml" value="0.1778115501519757" />
+        <entry key="..\:/Android_Studio/Memo/app/src/main/res/layout/fragment_memo4.xml" value="0.1778115501519757" />
         <entry key="..\:/Android_Studio/Memo/app/src/main/res/menu/menu.xml" value="0.22" />
         <entry key="..\:/Android_Studio/Memo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22870370370370371" />
         <entry key="..\:/Users/csw/Memo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2222222222222222" />
