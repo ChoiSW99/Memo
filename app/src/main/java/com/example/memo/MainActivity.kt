@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private val num_page = 4
     private var mIndicator: CircleIndicator3? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

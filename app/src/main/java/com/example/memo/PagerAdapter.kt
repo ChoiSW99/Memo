@@ -1,7 +1,6 @@
 package com.example.memo
 
 
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -23,7 +22,7 @@ class MyAdapter(fa: FragmentActivity?, var mCount: Int) : FragmentStateAdapter(
         return 2000
     }
 
-    fun getRealPosition(position: Int): Int {
+    private fun getRealPosition(position: Int): Int {
         return position % mCount
     }
 }
