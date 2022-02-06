@@ -24,12 +24,11 @@
         android:orientation="vertical">
 
 
-
         <ImageView
             android:id="@+id/imgBanner1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffcccc"
+            android:background="#FFDDDD"
             android:contentDescription="@string/app_name" />
 
         <androidx.recyclerview.widget.RecyclerView

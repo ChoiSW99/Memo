@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="기타"
         android:textAlignment="center"
-        android:textColor="#2C2A2A"
+        android:textColor="#3A3838"
         android:textStyle="bold" />
 
     <RelativeLayout
@@ -24,19 +24,19 @@
         android:orientation="vertical">
 
 
-    <ImageView
+        <ImageView
             android:id="@+id/imgBanner4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#999999"
-            android:contentDescription="@string/app_name"/>
+            android:background="#E4DEDE"
+            android:contentDescription="@string/app_name" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView4"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="vertical" />
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
     </RelativeLayout>
 
 
