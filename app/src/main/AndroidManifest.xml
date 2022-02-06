@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Memo">
         <activity
-            android:name=".EditActivity"
+            android:name=".Edit_DeleteActivity"
             android:exported="false" />
         <activity
             android:name=".AddActivity"

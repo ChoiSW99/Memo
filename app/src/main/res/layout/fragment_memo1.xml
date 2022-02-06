@@ -2,9 +2,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame1">
 
     <TextView
+        android:id="@+id/allText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="전체"
@@ -13,6 +15,7 @@
         android:textStyle="bold" />
 
     <RelativeLayout
+        android:id="@+id/frame1_layout"
         android:layout_width="match_parent"
         android:layout_marginLeft="@dimen/pageMarginAndOffset"
         android:layout_marginRight="@dimen/pageMarginAndOffset"
