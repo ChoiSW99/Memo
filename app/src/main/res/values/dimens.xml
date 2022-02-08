@@ -3,5 +3,5 @@
     <dimen name="pageMargin">20dp</dimen>
     <dimen name="offset">15dp</dimen>
     <dimen name="pageMarginAndOffset">33dp</dimen>
-    <dimen name="frameSize">600dp</dimen>
+    <dimen name="frameSize">630dp</dimen>
 </resources>
