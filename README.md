@@ -11,5 +11,7 @@
     
     메모를 클릭하면 전체내용을 확인할 수 있으며 수정 or 삭제 버튼을 이용하여 메모를 수정 or 삭제할 수 있다.
 
+![image](https://github.com/ChoiSW99/Memo/assets/84121891/c54002ae-ddb9-4945-96f2-1f86f2bbf653)
+
 
 #### 안드로이드 프로그래밍(with 코틀린)
