@@ -38,5 +38,3 @@
 - 여러 메모 저장 시 화면
 <img src="https://github.com/ChoiSW99/Memo/assets/84121891/8b74b243-7a90-435c-aad3-f2b864b92cb5.PNG"  width="300" height="550">
 
-
-#### 안드로이드 프로그래밍(with 코틀린)
