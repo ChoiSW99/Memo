@@ -11,10 +11,10 @@
     
     메모를 클릭하면 전체내용을 확인할 수 있으며 수정 or 삭제 버튼을 이용하여 메모를 수정 or 삭제할 수 있다.
 
-- 1번 : 전체 메모        
-- 2번 : 중요도가 '일상'인 메모    
-- 3번 : 중요도가 '중요'인 메모    
-- 4번 : 중요도가 '기타'인 메모    
+- 프래그먼트 1 : 전체 메모        
+- 프래그먼트 2 : 중요도가 '일상'인 메모    
+- 프래그먼트 3 : 중요도가 '중요'인 메모    
+- 프래그먼트 4 : 중요도가 '기타'인 메모    
 <img src="https://github.com/ChoiSW99/Memo/assets/84121891/b8eae29a-3552-480e-9e81-3e17b100aaff.PNG"  width="300" height="550">
 <img src="https://github.com/ChoiSW99/Memo/assets/84121891/44b1ccaa-0fd6-41f6-992a-b1d68b9920b3.PNG"  width="300" height="550">
 <img src="https://github.com/ChoiSW99/Memo/assets/84121891/790558fb-fd61-44c3-8755-b792d3e465fc.PNG"  width="300" height="550">
